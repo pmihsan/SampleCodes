@@ -1,0 +1,24 @@
+Include Header file
+
+//Define structure
+
+//Functions Definition
+
+Main function{
+
+//call menu function
+
+
+}
+menu function{
+
+//contains menu
+
+/*
+and a switch case to go into the particular section using functions
+And Each section contains a set of code to read the file and proceed with the comparison
+And in each case ask for which product and display its file
+And ask for comparison and read the COMPARISON file
+ELSE Proceed to the Order Section and the record the order 
+*/
+}
