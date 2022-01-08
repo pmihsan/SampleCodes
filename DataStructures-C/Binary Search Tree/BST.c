@@ -43,6 +43,17 @@ void insertData(int value){
 	}
 }
 
+struct node * Search(struct node * root, int value){
+	if(root == NULL || root->data == value){
+		return root;
+	}
+	if(root->data < value){
+		return Search(root->right, value);
+	}
+	return Search(root->left, value);
+}
+	
+
 struct node * MinNode(struct node *root){
 	if(root->left == NULL){
 		return root;
@@ -56,6 +67,39 @@ struct node * MaxNode(struct node *root){
 	}
 	return MaxNode(root->right);
 }
+
+struct node* deleteNode(struct node* node, int value){
+	if(node == NULL){
+		return NULL;
+	}
+	else{
+		if(node->data > value){
+			node->left = deleteNode(node->left, value);
+		}
+		else if(node->data < value){
+			node->right = deleteNode(node->right, value);
+		}
+		else{
+			if(node->left == NULL && node->right == NULL){
+				node = NULL;
+			}
+			else if(node->left == NULL){
+				node = node->right;
+			}
+			else if(node->right == NULL){
+				node = node->left;
+			}
+			else{
+				struct node* temp = MinNode(node->right);
+				node->data = temp->data;
+				node->right = deleteNode(node->right, temp->data);
+			}
+		}
+		return node;
+	}
+}
+
+
 
 void inOrder(struct node *root){
 	if(root == NULL){
@@ -95,16 +139,38 @@ void main(){
 		scanf("%d",&value);
 		insertData(value);
 	}
+	printf("Inorder Traversal\n");
 	inOrder(root);
 	printf("\n");
-	preOrder(root);
+	/*preOrder(root);
 	printf("\n");
 	postorder(root);
-	printf("\n");
+	printf("\n");*/
 	
 	struct node *minNode = MinNode(root);
 	printf("MinNode Data - %d\n",minNode->data);
 	
 	struct node *maxNode = MaxNode(root);
 	printf("MaxNode Data - %d\n",maxNode->data);
+	
+	struct node *searchNode = Search(root, 34);
+	if(searchNode){
+		printf("The Node data-%d is found\n",searchNode->data);
+	}
+	else{
+		printf("There is no node with data %d\n",34);
+	}
+	
+	printf("Deleting Node with Data %d\n",23);
+	deleteNode(root,23);
+	printf("Inorder Traversal\n");
+	inOrder(root);
+	printf("\n");
+	
+	
+	/*printf("Deleting Node with Data %d\n",56);
+	root = deleteNode(root,56);
+	printf("Inorder Traversal\n");
+	inOrder(root);
+	printf("\n");*/	
 }
