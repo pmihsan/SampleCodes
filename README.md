@@ -1,2 +1,14 @@
 # SampleCodes
-Contains Small C and R Programs 
+
+
+C
+	-Simple C Programs using files
+	-DataStructures and Algorithms 
+
+R
+	-Basic R Programs
+	
+Python
+	-Simple Pygame Programs
+
+ 
