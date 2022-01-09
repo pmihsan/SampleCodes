@@ -1,7 +1,0 @@
-Mobile name: Nokia
-Rate: 15.000000
-Model: ,000.00
-Camera: 16MP
-Ram: 3GB
-Storage: 32GB
-Processor: Qualcomm-Snapdragon

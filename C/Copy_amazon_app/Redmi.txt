@@ -1,7 +1,0 @@
-Mobile name: Redmi
-Rate: 10000.000000
-Model: Note4
-Camera: 20MP
-Ram: 4GB
-Storage: 64GB
-Processor: X-Processor

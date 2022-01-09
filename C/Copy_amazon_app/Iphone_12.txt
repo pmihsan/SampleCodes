@@ -1,7 +1,0 @@
-Mobile name Iphone_12
-Rate 86000.000000
-Model Pro_max
-Camera 24MP
-Ram 8GB
-Storage 256GB
-Processor Snapdragon
