@@ -1,0 +1,15 @@
+
+Mobile name: Samsung
+
+Rate: 16000.000000
+
+Model: M31
+
+Camera: 64MP
+
+Ram: 6GB
+
+Storage: 128GB
+
+Processor: Ex-Processor
+

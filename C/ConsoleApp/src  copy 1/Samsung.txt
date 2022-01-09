@@ -1,0 +1,7 @@
+Mobile name Samsung
+Rate 18000.000000
+Model M31
+Camera 64MP
+Ram 6GB
+Storage 128GB
+Processor Snapdragon
