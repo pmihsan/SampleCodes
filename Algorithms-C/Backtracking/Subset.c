@@ -10,17 +10,19 @@ void printSubset(int arr[], int res[], int n){
 	printf("}\n");
 }
 
-void Subsets(int arr[], int res[], int s, int n){
+int Subsets(int arr[], int res[], int s, int n){
 	if(s == n){
 		printSubset(arr,res,n);
-		return;
+		return 1;
 	}
+	int count = 0;
 	res[s] = 1;
-	Subsets(arr, res, s+1, n);
+	count += Subsets(arr, res, s+1, n);
 	res[s] = 0;
 	if(s < n){
-		Subsets(arr, res, s+1, n);
+		count += Subsets(arr, res, s+1, n);
 	}
+	return count;
 }
 
 void main(){
@@ -35,6 +37,7 @@ void main(){
 		scanf("%d",&arr[i]);
 	}
 	printf("Printing Subsets\n");
-	Subsets(arr,res,s,n);
+	int ans = Subsets(arr,res,s,n);
+	printf("The total no of subsets is %d\n",ans);
 }
 	
