@@ -1,6 +1,21 @@
 #include<stdio.h>
-#define N 2
+#define N 4
 int ans = 0;
+
+void display(int board[N][N]){
+	for(int i=0;i<N;i++){
+		for(int j=0;j<N;j++){
+			if(board[i][j] == 1){
+				printf(" K ");
+			}
+			else{
+				printf(" X ");
+			}
+		}
+		printf("\n");
+	}
+	printf("\n");
+}
 
 void printBoard(int board[N][N]){
 	for(int i=0;i<N;i++){
@@ -38,7 +53,7 @@ int isSafe(int board[N][N], int row, int col){
 
 void nKnights(int board[N][N], int row, int col, int knights){
 	if(knights == 0){
-		printBoard(board);
+		display(board);
 		ans++;
 		return;
 	}
