@@ -1,14 +1,16 @@
 # SampleCodes
-
-
 C
-	-Simple C Programs using files
-	-DataStructures and Algorithms 
+	->Simple C Programs using files
+	->Data-Structures and Algorithms 
+
+Java
+	->Java Beginner Level Projects
 
 R
-	-Basic R Programs
+	->Basics of R Programming
 	
 Python
-	-Simple Pygame Programs
+	->Pygame Programs
+	->Basic Datatypes in Python
 
  
