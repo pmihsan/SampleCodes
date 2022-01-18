@@ -6,6 +6,7 @@ int graph[N][N];
 int vertex;
 
 void printSolution(int dist[]){
+	printf("From Source Vertex 0\n");
 	for(int i = 0;i<vertex;i++){
 		printf("Vertex - %d and Distance - %d\n",i,dist[i]);
 	}
