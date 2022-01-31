@@ -15,7 +15,7 @@ void printHeap(){
 }
 
 void printSortedHeap(){
-        printf("\nDecreasingly Sorted Heap\n");
+        printf("\nSorted Heap\n");
         for(int i=0;i<k;i++){
                 printf("%d\t",arr[i]);
         }
@@ -29,18 +29,18 @@ void swap(int *a, int *b){
 }
 
 void heapify(int i){
-	int smallest = i;
+	int largest = i;
 	int left = 2*i + 1;
 	int right = 2*i + 2;
-	if(left < n && arr[left] < arr[smallest]){
-		smallest = left;
+	if(left < n && arr[left] > arr[largest]){
+		largest = left;
 	}
-	if(right < n && arr[right] < arr[smallest]){
-		smallest = right;
+	if(right < n && arr[right] > arr[largest]){
+		largest = right;
 	}
-	if(smallest != i){
-		swap(&arr[i], &arr[smallest]);
-		heapify(smallest);
+	if(largest != i){
+		swap(&arr[i], &arr[largest]);
+		heapify(largest);
 	}
 }
 
@@ -52,17 +52,19 @@ void insertHeap(int val){
 	printf("Inserting %d into the heap\n",val);
 	arr[n++] = val;
 	// Recursive Approach
-	for (int i = n/2 - 1; i >= 0; i--)
+	/*for (int i = n/2 - 1; i >= 0; i--)
     	{
       		heapify(i);
     	}
-	printf("\n");
+	printf("\n");*/
 	
-	/*int i = n;
+	
+	//Iterative approach
+	int i = n;
 	int parent;
 	while(i > 0){
 		parent = i/2;
-		if(arr[parent] > arr[i]){
+		if(arr[parent] < arr[i]){
 			swap(&arr[i], &arr[parent]);
 			i = parent;
 		}
@@ -70,7 +72,7 @@ void insertHeap(int val){
 			return;
 		}
 	}
-	printf("\n");*/
+	printf("\n");
 }
 
 
@@ -108,11 +110,11 @@ void main(){
         /*deleteRoot();
         printHeap();*/
         
-        //Min Heap so on deletion prints in Ascending Order
+        //Max Heap so on deletion prints in Descending Order
         for(int i=0;i<k;i++){
         	deleteRoot();
         }
         
-        //The decreasingly sorted array gets stored in the same array as well
+        //The sorted array gets stored in the same array as well
         printSortedHeap();
 }

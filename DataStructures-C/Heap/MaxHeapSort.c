@@ -57,20 +57,6 @@ void insertHeap(int val){
       		heapify(i);
     	}
 	printf("\n");
-	
-	/*int i = n;
-	int parent;
-	while(i > 0){
-		parent = i/2;
-		if(arr[parent] < arr[i]){
-			swap(&arr[i], &arr[parent]);
-			i = parent;
-		}
-		else{
-			return;
-		}
-	}
-	printf("\n");*/
 }
 
 
