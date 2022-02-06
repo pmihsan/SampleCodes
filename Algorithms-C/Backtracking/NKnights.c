@@ -1,5 +1,5 @@
 #include<stdio.h>
-#define N 4
+#define N 2
 int ans = 0;
 
 void display(int board[N][N]){
