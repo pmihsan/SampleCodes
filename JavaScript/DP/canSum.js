@@ -1,16 +1,16 @@
-const canSum = (target, nums, memo = {}) => {
-    if(target in memo) return memo[target];
-    if(target === 0) return true;
-    if(target < 0 ) return false;
+const canSum = (targetSum, numbers, memo = {}) => {
+    if(targetSum in memo) return memo[targetSum];
+    if(targetSum === 0) return true;
+    if(targetSum < 0 ) return false;
 
-    for(let num of nums){
-        let remaining = target - num;
-        let res = canSum(remaining, nums, memo)
-        if(res === true){
+    for(let num of numbers){
+        const remainder = targetSum - num;
+        if(canSum(remainder, numbers, memo) === true){
+            memo[targetSum] = true;
             return true;
-        }
-        memo[target] = res;
+        } 
     }
+    memo[targetSum] = false;
     return false;
 };
 
