@@ -7,7 +7,7 @@ Java
 	->Java Beginner Level Projects
 
 JavaScript
-	->Twilio Quest Programs
+	->TQ Programs
 	->DP Programs
 	
 Python
