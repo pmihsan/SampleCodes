@@ -1,16 +1,21 @@
 # SampleCodes
 C
-	->Simple C Programs using files
-	->Data-Structures and Algorithms 
+	->Data-Structures and Algorithms
+	->Programs using files 
 
 Java
 	->Java Beginner Level Projects
 
-R
-	->Basics of R Programming
+JavaScript
+	->Twilio Quest Programs
+	->DP Programs
 	
 Python
 	->Pygame Programs
-	->Basic Datatypes in Python
+	->Fundamentals in Python
+	
+R
+	->Basics of R Programming
+	->ScatterPlots in R
 
  
