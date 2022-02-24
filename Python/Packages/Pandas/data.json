@@ -1,0 +1,21 @@
+{
+    "School": [
+      {
+        "name": "Rose",
+        "location": "TN",
+        "medium": "English",
+        "Student": [
+          {
+            "name": "PM",
+            "roll": 20,
+            "marks": 90
+          },
+          {
+            "name": "PMI",
+            "roll": 22,
+            "marks": 94
+          }
+        ]
+      }
+    ]
+  }
